@@ -1,0 +1,37 @@
+{
+  "name": "automaton_simulator",
+  "version": "1.0.0",
+  "description": "An app that simulates various finite state machines",
+  "main": "main.js",
+  "author": "Kyle Dickerson & LowkeyCoding",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm run development",
+    "start": "electron .",
+    "distw": "electron-builder -w",
+    "distl": "electron-builder -l",
+    "distm": "electron-builder -l"
+  },
+  "devDependencies": {
+    "electron": "^19.0.1",
+    "electron-builder": "^23.0.3",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-reloader": "^1.2.3"
+  },
+  "build": {
+    "appId": "dev.walsted.fsm",
+    "productName": "FSM",
+    "target": "NSIS",
+    "directories": {
+      "output": "build"
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    }
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.8",
+    "electron-prompt": "^1.7.0"
+  }
+}
